@@ -15,10 +15,10 @@ type Props = {
 };
 
 export default function Sidebar({ className }: Props) {
-	const classNames = clsx(className);
+	const classNames = clsx("bg-[#1e1f25] min-w-[94px] min-h-screen px-4 py-5", className);
 
 	return (
-		<nav className="bg-[#1e1f25] min-w-[94px] min-h-screen px-4 py-5">
+		<nav className={classNames}>
 			<a href="/">
 				<Logo height={64} width={64} />
 			</a>
