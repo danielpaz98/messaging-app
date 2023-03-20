@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		background-color: #131517;
+		font-family: "DM Sans", sans-serif;
+		font-weight: 400;
+		font-size: theme("fontSize.base");
+	}
+}
