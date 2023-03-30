@@ -1,5 +1,5 @@
 // PLUGINS
-import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 // COMPONENTS
 import UserNotifications from "./UserNotifications";
 import DropdownUserMenu from "./DropdownUserMenu";
@@ -10,7 +10,10 @@ type Props = {
 };
 
 export default function TopBar({ className }: Props) {
-	const classNames = clsx("bg-[#1e1f25] py-4 px-10", className);
+	const classNames = twMerge(
+		"min-h-[var(--header-height)] border-b-[1px] border-[#131517] bg-[#1e1f25] py-4 px-10",
+		className
+	);
 
 	return (
 		<header className={classNames}>
