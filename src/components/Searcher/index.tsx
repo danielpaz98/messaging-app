@@ -10,7 +10,7 @@ type Props = {
 	searchIcon?: () => JSX.Element;
 };
 
-export default function Searcher({ className, placeholder, searchIcon: SearchIcon }: Props) {
+function Searcher({ className, placeholder, searchIcon: SearchIcon }: Props) {
 	const classNames = twMerge("bg-[#050505] text-[#9babc5] text-sm flex gap-4 py-3 px-5 rounded-lg", className);
 
 	return (
@@ -31,3 +31,5 @@ export default function Searcher({ className, placeholder, searchIcon: SearchIco
 		</form>
 	);
 }
+
+export default Searcher;

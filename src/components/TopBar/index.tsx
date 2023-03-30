@@ -9,7 +9,7 @@ type Props = {
 	className?: string;
 };
 
-export default function TopBar({ className }: Props) {
+function TopBar({ className }: Props) {
 	const classNames = twMerge(
 		"min-h-[var(--header-height)] border-b-[1px] border-[#131517] bg-[#1e1f25] py-4 px-10",
 		className
@@ -33,3 +33,5 @@ export default function TopBar({ className }: Props) {
 		</header>
 	);
 }
+
+export default TopBar;

@@ -6,7 +6,7 @@ type Props = {
 	src: string;
 };
 
-export default function ProfilePicture({ className, src }: Props) {
+function ProfilePicture({ className, src }: Props) {
 	const classNames = twMerge("block w-10 h-10 rounded-full", className);
 
 	return (
@@ -15,3 +15,5 @@ export default function ProfilePicture({ className, src }: Props) {
 		</picture>
 	);
 }
+
+export default ProfilePicture;
