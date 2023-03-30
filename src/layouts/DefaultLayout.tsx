@@ -8,12 +8,12 @@ type Props = {
 
 export default function DefaultLayout({ children }: Props) {
 	return (
-		<div className="flex">
+		<div className="main-container flex">
 			<Sidebar />
 
 			<div className="container">
 				<TopBar />
-				<main>{children}</main>
+				<main className="h-[calc(100vh-var(--header-height))] overflow-y-auto hover-scrollbar">{children}</main>
 			</div>
 		</div>
 	);
