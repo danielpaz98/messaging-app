@@ -1,6 +1,6 @@
 import { isValidElement } from "react";
 // PLUGINS
-import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 // ICONS
 import { ReactComponent as MagnifyingGlassIcon } from "~/assets/icons/magnifying-glass.svg";
 
@@ -11,7 +11,7 @@ type Props = {
 };
 
 export default function Searcher({ className, placeholder, searchIcon: SearchIcon }: Props) {
-	const classNames = clsx("bg-[#050505] text-[#9BABC5] text-sm flex gap-4 py-3 px-5 rounded-lg", className);
+	const classNames = twMerge("bg-[#050505] text-[#9babc5] text-sm flex gap-4 py-3 px-5 rounded-lg", className);
 
 	return (
 		<form className={classNames}>
