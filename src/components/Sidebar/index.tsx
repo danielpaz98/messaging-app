@@ -1,5 +1,5 @@
 // PLUGINS
-import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 // IMAGES
 import { ReactComponent as Logo } from "~/assets/images/svg/logo.svg";
 // ICONS
@@ -15,11 +15,14 @@ type Props = {
 };
 
 export default function Sidebar({ className }: Props) {
-	const classNames = clsx("bg-[#1e1f25] min-w-[94px] min-h-screen px-4 py-5", className);
+	const classNames = twMerge(
+		"bg-[#1e1f25] min-w-[var(--sidebar-width)] h-screen overflow-y-auto hover-scrollbar px-4 py-5",
+		className
+	);
 
 	return (
 		<nav className={classNames}>
-			<a href="/">
+			<a href="/" tabIndex={-1}>
 				<Logo height={64} width={64} />
 			</a>
 
