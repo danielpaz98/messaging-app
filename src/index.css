@@ -3,10 +3,63 @@
 @tailwind utilities;
 
 @layer base {
+	:root {
+		--sidebar-width: 5.875rem;
+		--header-height: 4.75rem;
+	}
+
 	body {
 		background-color: #131517;
 		font-family: "DM Sans", sans-serif;
 		font-weight: 400;
 		font-size: theme("fontSize.base");
+	}
+
+	/* SCROLLBAR */
+	body::-webkit-scrollbar-thumb {
+		background-color: #57575a;
+	}
+	
+	body::-webkit-scrollbar {
+		width: 5px;
+		height: 5px;
+	}
+	
+	body::-webkit-scrollbar-thumb {
+		border-radius: 4px;
+	}
+}
+
+@layer utilities {
+	.main-container {
+		width: 100%;
+		max-width: 1600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	[class*=scrollbar]::-webkit-scrollbar {
+		width: 5px;
+		height: 5px;
+	}
+
+	.scrollbar::-webkit-scrollbar-thumb {
+		background-color: #57575a;
+		border-radius: 4px;
+	}
+
+	.hover-scrollbar::-webkit-scrollbar-thumb {
+		color: inherit;
+		box-shadow: inset 0 0 2rem;
+		border-radius: 4px;
+	}
+
+	.hover-scrollbar {
+		color: transparent;
+		transition: color .3s;
+	}
+	
+	.hover-scrollbar:hover {
+		color: #57575a;
 	}
 }
