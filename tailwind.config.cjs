@@ -6,6 +6,10 @@ module.exports = {
 			fontFamily: {
 				DMsans: "'DM Sans', sans-serif",
 			},
+			screens: {
+				xs: "320px",
+				mobile: "500px",
+			},
 		},
 	},
 	plugins: [],
