@@ -11,7 +11,7 @@ type Props = {
 };
 
 function Searcher({ className, placeholder, searchIcon: SearchIcon }: Props) {
-	const classNames = twMerge("bg-[#050505] text-[#9babc5] text-sm flex gap-4 py-3 px-5 rounded-lg", className);
+	const classNames = twMerge("bg-black text-echo-blue text-sm flex gap-4 py-3 px-5 rounded-lg", className);
 
 	return (
 		<form className={classNames}>
@@ -25,7 +25,12 @@ function Searcher({ className, placeholder, searchIcon: SearchIcon }: Props) {
 				SearchIcon()
 			) : (
 				<button type="button">
-					<MagnifyingGlassIcon className="pointer-events-none" fill="#c2c7d0" height={20} width={20} />
+					<MagnifyingGlassIcon
+						className="pointer-events-none text-link-water"
+						fill="currentColor"
+						height={20}
+						width={20}
+					/>
 				</button>
 			)}
 		</form>

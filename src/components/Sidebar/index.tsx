@@ -16,7 +16,7 @@ type Props = {
 
 export default function Sidebar({ className }: Props) {
 	const classNames = twMerge(
-		"bg-[#1e1f25] min-w-[var(--sidebar-width)] h-screen overflow-y-auto hover-scrollbar px-4 py-5",
+		"bg-black-russian-1 min-w-[var(--sidebar-width)] h-screen overflow-y-auto hover-scrollbar px-4 py-5",
 		className
 	);
 
@@ -30,37 +30,42 @@ export default function Sidebar({ className }: Props) {
 				<ul className="grid place-items-center gap-11">
 					<li>
 						<button type="button">
-							<Grid2Icon className="pointer-events-none" fill="#5f6388" height={20} width={20} />
+							<Grid2Icon className="pointer-events-none text-comet" fill="currentColor" height={20} width={20} />
 						</button>
 					</li>
 
 					<li>
 						<button type="button">
-							<FilterIcon className="pointer-events-none" fill="#5f6388" height={20} width={20} />
+							<FilterIcon className="pointer-events-none text-comet" fill="currentColor" height={20} width={20} />
 						</button>
 					</li>
 
 					<li>
 						<button type="button">
-							<BookOpenIcon className="pointer-events-none" fill="#5f6388" height={20} width={20} />
+							<BookOpenIcon className="pointer-events-none text-comet" fill="currentColor" height={20} width={20} />
 						</button>
 					</li>
 
 					<li>
 						<button type="button">
-							<GearIcon className="pointer-events-none" fill="#5f6388" height={20} width={20} />
+							<GearIcon className="pointer-events-none text-comet" fill="currentColor" height={20} width={20} />
 						</button>
 					</li>
 
 					<li>
-						<button className="bg-[#5051f9] p-3 rounded-[14px] shadow-[0_8px_14px_rgba(62,107,224,0.12)]" type="button">
-							<PaperPlaneTopIcon className="pointer-events-none" fill="#fff" height={20} width={20} />
+						<button className="bg-neon-blue p-3 rounded-[14px] shadow-[0_8px_14px_rgba(62,107,224,0.12)]" type="button">
+							<PaperPlaneTopIcon
+								className="pointer-events-none text-white"
+								fill="currentColor"
+								height={20}
+								width={20}
+							/>
 						</button>
 					</li>
 
 					<li>
 						<button type="button">
-							<FolderPlusIcon className="pointer-events-none" fill="#5f6388" height={20} width={20} />
+							<FolderPlusIcon className="pointer-events-none text-comet" fill="currentColor" height={20} width={20} />
 						</button>
 					</li>
 				</ul>

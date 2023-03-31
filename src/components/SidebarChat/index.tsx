@@ -38,7 +38,7 @@ function SidebarChat({
 		<div className={classNames}>
 			<ProfilePicture
 				className={clsx("flex-shrink-0 w-[50px] h-[50px]", {
-					"relative before:block before:bg-[#41d37e] before:w-2 before:h-2 before:rounded-full before:absolute before:bottom-1 before:right-1 before:shadow-[0_0_0_2px_#fefdfd]":
+					"relative before:block before:bg-emerald before:w-2 before:h-2 before:rounded-full before:absolute before:bottom-1 before:right-1 before:shadow-[0_0_0_2px_#fefdfd]":
 						isOnline,
 				})}
 				src={image}
@@ -46,17 +46,17 @@ function SidebarChat({
 
 			<div className="flex-grow flex justify-between gap-1">
 				<div className="grid gap-1">
-					<h4 className="text-[#e9e9e9] text-base font-bold truncate">{name}</h4>
+					<h4 className="text-whisper text-base font-bold truncate">{name}</h4>
 					{isTyping ? (
-						<p className="text-[#258c60] text-sm">Typing...</p>
+						<p className="text-sea-green text-sm">Typing...</p>
 					) : (
-						<p className="text-[#d2d2d2] text-sm truncate">
+						<p className="text-light-gray text-sm truncate">
 							{message ||
 								(isVoiceMessage && (
 									<>
 										<MicrophoneOutlineIcon
-											className="pointer-events-none flex-shrink-0 inline"
-											fill="#a9abad"
+											className="pointer-events-none flex-shrink-0 inline text-gray-chateau"
+											fill="currentColor"
 											height={17}
 										/>
 
@@ -68,17 +68,22 @@ function SidebarChat({
 				</div>
 
 				<div className="grid gap-1 text-sm">
-					<time className="text-[#a9abad] whitespace-nowrap">{date}</time>
+					<time className="text-gray-chateau whitespace-nowrap">{date}</time>
 
 					{unreadQuantity && (
 						<NotificationBadge
-							className="ml-auto w-4 h-4 bg-[#d34141] text-sm leading-none"
+							className="ml-auto w-4 h-4 bg-persian-red text-sm leading-none"
 							notifications={unreadQuantity}
 						/>
 					)}
 
 					{readMessage && (
-						<CheckDoubleIcon className="ml-auto pointer-events-none" fill="#41d37e" height={8} width={16} />
+						<CheckDoubleIcon
+							className="ml-auto pointer-events-none text-emerald"
+							fill="currentColor"
+							height={8}
+							width={16}
+						/>
 					)}
 				</div>
 			</div>

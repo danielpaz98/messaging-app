@@ -16,10 +16,10 @@ export default function UserNotifications({ className, notifications: notificati
 
 	return (
 		<button className={classNames} type="button">
-			<BellIcon className="pointer-events-none" fill="#eeeeee" height={20} width={20} />
+			<BellIcon className="pointer-events-none text-whisper" fill="currentColor" height={20} width={20} />
 
 			{notifications > 0 && (
-				<NotificationBadge className="!bg-[#5150f9] absolute -top-1 right-0" notifications={notifications} />
+				<NotificationBadge className="bg-neon-blue absolute -top-1 right-0" notifications={notifications} />
 			)}
 		</button>
 	);
