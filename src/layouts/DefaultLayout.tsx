@@ -13,7 +13,7 @@ export default function DefaultLayout({ children }: Props) {
 
 			<div className="container">
 				<TopBar />
-				<main className="h-[calc(100vh-var(--header-height))] overflow-y-auto hover-scrollbar">{children}</main>
+				<main className="h-[calc(100vh-var(--header-height))]">{children}</main>
 			</div>
 		</div>
 	);
