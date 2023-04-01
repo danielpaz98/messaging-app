@@ -11,7 +11,6 @@ module.exports = {
 				mobile: "500px",
 			},
 			colors: {
-				background: "#131517",
 				whisper: "#e9e9e9",
 				mischka: "#b4b5b7",
 				emerald: "#41d37e",
