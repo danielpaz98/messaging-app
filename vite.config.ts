@@ -11,6 +11,10 @@ export default defineConfig({
 		svgr({
 			svgrOptions: {
 				dimensions: false,
+				svgProps: {
+					fill: "currentColor",
+					className: "pointer-events-none",
+				},
 			},
 		}),
 	],
