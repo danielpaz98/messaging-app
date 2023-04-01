@@ -9,7 +9,6 @@
 	}
 
 	body {
-		background-color: theme("colors.background");
 		font-family: "DM Sans", sans-serif;
 		font-weight: 400;
 		font-size: theme("fontSize.base");
