@@ -16,7 +16,7 @@ function Searcher({ className, placeholder, searchIcon: SearchIcon }: Props) {
 	return (
 		<form className={classNames}>
 			<input
-				className="placeholder:text-[currentColor] bg-[inherit] flex-grow outline-none"
+				className="placeholder:text-current bg-inherit flex-grow outline-none"
 				placeholder={placeholder}
 				type="text"
 			/>
