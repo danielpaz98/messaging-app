@@ -11,7 +11,7 @@ type Props = {
 
 function TopBar({ className }: Props) {
 	const classNames = twMerge(
-		"min-h-[var(--header-height)] border-b-[1px] border-background bg-black-russian-1 py-4 px-10",
+		"min-h-[var(--header-height)] border-b-[1px] border-b-black-pearl bg-black-russian-1 py-4 px-10",
 		className
 	);
 
