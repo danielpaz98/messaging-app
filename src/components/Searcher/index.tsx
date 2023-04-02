@@ -25,7 +25,7 @@ function Searcher({ className, placeholder, searchIcon: SearchIcon }: Props) {
 				SearchIcon()
 			) : (
 				<button type="button">
-					<MagnifyingGlassIcon className="text-link-water" height={20} width={20} />
+					<MagnifyingGlassIcon className="pointer-events-none text-link-water" height={20} width={20} />
 				</button>
 			)}
 		</form>

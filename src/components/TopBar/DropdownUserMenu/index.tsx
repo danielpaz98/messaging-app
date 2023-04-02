@@ -17,7 +17,7 @@ export default function DropdownUserMenu({ className }: Props) {
 			<ProfilePicture src="https://api.dicebear.com/5.x/personas/svg?seed=Jack&backgroundColor=e7e7ff" />
 
 			<i>
-				<ArrowDownIcon className="text-white" height={14} width={14} />
+				<ArrowDownIcon className="pointer-events-none text-white" height={14} width={14} />
 			</i>
 		</div>
 	);

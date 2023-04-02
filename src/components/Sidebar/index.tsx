@@ -30,37 +30,37 @@ export default function Sidebar({ className }: Props) {
 				<ul className="grid place-items-center gap-11">
 					<li>
 						<button type="button">
-							<Grid2Icon className="text-comet" height={20} width={20} />
+							<Grid2Icon className="pointer-events-none text-comet" height={20} width={20} />
 						</button>
 					</li>
 
 					<li>
 						<button type="button">
-							<FilterIcon className="text-comet" height={20} width={20} />
+							<FilterIcon className="pointer-events-none text-comet" height={20} width={20} />
 						</button>
 					</li>
 
 					<li>
 						<button type="button">
-							<BookOpenIcon className="text-comet" height={20} width={20} />
+							<BookOpenIcon className="pointer-events-none text-comet" height={20} width={20} />
 						</button>
 					</li>
 
 					<li>
 						<button type="button">
-							<GearIcon className="text-comet" height={20} width={20} />
+							<GearIcon className="pointer-events-none text-comet" height={20} width={20} />
 						</button>
 					</li>
 
 					<li>
 						<button className="bg-neon-blue p-3 rounded-[14px] shadow-[0_8px_14px_rgba(62,107,224,0.12)]" type="button">
-							<PaperPlaneTopIcon className="text-white" height={20} width={20} />
+							<PaperPlaneTopIcon className="pointer-events-none text-white" height={20} width={20} />
 						</button>
 					</li>
 
 					<li>
 						<button type="button">
-							<FolderPlusIcon className="text-comet" height={20} width={20} />
+							<FolderPlusIcon className="pointer-events-none text-comet" height={20} width={20} />
 						</button>
 					</li>
 				</ul>

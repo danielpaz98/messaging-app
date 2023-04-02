@@ -13,7 +13,6 @@ export default defineConfig({
 				dimensions: false,
 				svgProps: {
 					fill: "currentColor",
-					className: "pointer-events-none",
 				},
 			},
 		}),
