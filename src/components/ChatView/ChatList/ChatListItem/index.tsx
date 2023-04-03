@@ -4,8 +4,8 @@ import { twMerge } from "tailwind-merge";
 // COMPONENTS
 import { ProfilePicture, NotificationBadge } from "~/components";
 // ICONS
-import { ReactComponent as CheckDoubleIcon } from "~/assets/icons/check-double.svg";
 import { ReactComponent as MicrophoneOutlineIcon } from "~/assets/icons/microphone-outline.svg";
+import { ReactComponent as CheckDoubleIcon } from "~/assets/icons/check-double.svg";
 
 type Props = {
 	className?: string;
@@ -20,7 +20,7 @@ type Props = {
 	unreadQuantity?: number;
 };
 
-function SidebarChat({
+function ChatListItem({
 	className,
 	image,
 	name,
@@ -56,7 +56,6 @@ function SidebarChat({
 									<>
 										<MicrophoneOutlineIcon
 											className="pointer-events-none flex-shrink-0 inline text-gray-chateau"
-											fill="currentColor"
 											height={17}
 										/>
 
@@ -78,12 +77,7 @@ function SidebarChat({
 					)}
 
 					{readMessage && (
-						<CheckDoubleIcon
-							className="ml-auto pointer-events-none text-emerald"
-							fill="currentColor"
-							height={8}
-							width={16}
-						/>
+						<CheckDoubleIcon className="pointer-events-none ml-auto text-emerald" height={8} width={16} />
 					)}
 				</div>
 			</div>
@@ -91,4 +85,4 @@ function SidebarChat({
 	);
 }
 
-export default SidebarChat;
+export default ChatListItem;
