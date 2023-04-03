@@ -45,7 +45,7 @@ export const chats: TChats[] = [
 		id: 3,
 		hour: "10:30 AM",
 		date: "Today, March 24",
-		image: "https://api.dicebear.com/5.x/personas/svg?seed=Misty&backgroundColor=5d6c67",
+		image: "https://api.dicebear.com/5.x/personas/svg?seed=Tiger&backgroundColor=f2f2f2",
 		username: "Dristin Watson",
 		inbound: true,
 		messages: [{ id: 6, type: EMessageTypes.text, text: "Great 🔥 That’s a nice design Idea. 😍👏" }],

@@ -12,7 +12,7 @@ export const recentChats = [
 		id: 2,
 		image: "https://api.dicebear.com/5.x/icons/svg?seed=Socks",
 		name: "Design Team",
-		message: "Hello! Everyone",
+		message: "Awesome 🔥",
 		date: "9:36 AM",
 		readMessage: true,
 		isOnline: false,
@@ -47,15 +47,6 @@ export const allChats = [
 	},
 	{
 		id: 3,
-		image: "https://api.dicebear.com/5.x/personas/svg?seed=Miss%20kitty&backgroundColor=8acee2",
-		name: "Milie Nose",
-		message: "Awesome 🔥",
-		date: "8:20 PM",
-		isOnline: true,
-		unreadQuantity: 1,
-	},
-	{
-		id: 4,
 		image: "https://api.dicebear.com/5.x/personas/svg?seed=Misty&backgroundColor=5d6c67",
 		name: "Ikhsan SD",
 		isVoiceMessage: true,
@@ -63,7 +54,7 @@ export const allChats = [
 		isOnline: false,
 	},
 	{
-		id: 5,
+		id: 4,
 		image: "https://api.dicebear.com/5.x/personas/svg?seed=Snickers&backgroundColor=c27170",
 		name: "Aditya",
 		message: "publish now",
@@ -72,7 +63,7 @@ export const allChats = [
 		readMessage: true,
 	},
 	{
-		id: 6,
+		id: 5,
 		image: "https://api.dicebear.com/5.x/personas/svg?seed=Abby&backgroundColor=ebbf9a",
 		name: "Ahmed Medi",
 		message: "Wow really Cool 🔥",

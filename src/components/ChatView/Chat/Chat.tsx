@@ -43,7 +43,11 @@ function Chat({ className }: Props) {
 								/>
 								<ProfilePicture
 									className="w-7 h-7"
-									src="https://api.dicebear.com/5.x/personas/svg?seed=Bella&backgroundColor=fac248"
+									src="https://api.dicebear.com/5.x/personas/svg?seed=Miss%20kitty&backgroundColor=8acee2"
+								/>
+								<ProfilePicture
+									className="w-7 h-7"
+									src="https://api.dicebear.com/5.x/personas/svg?seed=Tiger&backgroundColor=f2f2f2"
 								/>
 							</div>
 
