@@ -1,4 +1,5 @@
 export { default as ChatView } from "./ChatView";
+export { default as IconFile } from "./IconFile";
 export { default as NotificationBadge } from "./NotificationBadge";
 export { default as ProfilePicture } from "./ProfilePicture";
 export { default as Searcher } from "./Searcher";
