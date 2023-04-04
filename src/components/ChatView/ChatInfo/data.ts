@@ -5,7 +5,7 @@ export const attachments = [
 	{
 		id: 1,
 		fileUrl: "/",
-		fileName: "Very important file.figma",
+		fileName: "Very important file",
 		fileSize: "7.5 MB",
 		fileFormat: FormatType.figma,
 		hour: "11:15 AM",
@@ -13,7 +13,7 @@ export const attachments = [
 	{
 		id: 2,
 		fileUrl: "/",
-		fileName: "Some file. scratch",
+		fileName: "Some file",
 		fileSize: "7.5 MB",
 		fileFormat: FormatType.scratch,
 		hour: "11:15 AM",
@@ -21,7 +21,7 @@ export const attachments = [
 	{
 		id: 3,
 		fileUrl: "/",
-		fileName: "List of someting. xd",
+		fileName: "List of someting",
 		fileSize: "7.5 MB",
 		fileFormat: FormatType.xd,
 		hour: "11:15 AM",
@@ -29,7 +29,7 @@ export const attachments = [
 	{
 		id: 4,
 		fileUrl: "/",
-		fileName: "Very important fil.svg",
+		fileName: "Very important fil",
 		fileSize: "7.5 MB",
 		fileFormat: FormatType.svg,
 		hour: "11:15 AM",
