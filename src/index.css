@@ -63,4 +63,8 @@
 	.hover-scrollbar:hover {
 		color: #57575a;
 	}
+
+	.break-words {
+		word-break: break-word;
+	}
 }

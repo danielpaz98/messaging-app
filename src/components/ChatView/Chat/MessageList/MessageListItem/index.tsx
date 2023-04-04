@@ -13,7 +13,7 @@ export type Props = {
 
 function MessageListItem({ inbound, children, className }: Props) {
 	const roundedNone = inbound ? "[&:first-child>span]:rounded-tr-none" : "[&:first-child>span]:rounded-tl-none";
-	const classNames = twMerge("flex gap-1 w-fit break-all text-light-slate-gray text-sm", className);
+	const classNames = twMerge("flex gap-1 w-fit break-words text-light-slate-gray text-sm", className);
 	const messageClasses = twMerge("flex-grow p-3 rounded-[10px] bg-black-russian-1");
 
 	return (
