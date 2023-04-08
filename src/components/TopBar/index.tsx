@@ -4,6 +4,8 @@ import { twMerge } from "tailwind-merge";
 import UserNotifications from "./UserNotifications";
 import DropdownUserMenu from "./DropdownUserMenu";
 import Searcher from "~/components/Searcher";
+// IMAGES
+import { ReactComponent as Logo } from "~/assets/images/svg/logo.svg";
 
 type Props = {
 	className?: string;
@@ -17,16 +19,23 @@ function TopBar({ className }: Props) {
 
 	return (
 		<header className={classNames}>
-			<nav className="flex justify-between">
-				<Searcher className="min-w-[290px] mx-auto" placeholder="Search anything..." />
+			<nav className="flex items-center justify-between gap-5 md:gap-0">
+				<a className="w-9 h-9 mobile:w-12 mobile:h-12 block lg:hidden" href="/" tabIndex={-1}>
+					<Logo className="w-[inherit] h-[inherit]" />
+				</a>
 
-				<ul className="flex items-center gap-[30px]">
+				<Searcher
+					className="flex-grow mobile:flex-grow-0 mobile:min-w-[290px] mx-auto"
+					placeholder="Search anything..."
+				/>
+
+				<ul className="flex items-center gap-5 md:gap-[30px]">
 					<li className="flex">
-						<UserNotifications notifications={2} />
+						<UserNotifications className="w-4 mobile:w-5" notifications={2} />
 					</li>
 
 					<li>
-						<DropdownUserMenu />
+						<DropdownUserMenu className="[&>picture]:w-8 [&>picture]:h-8 mobile:[&>picture]:w-10 mobile:[&>picture]:h-10" />
 					</li>
 				</ul>
 			</nav>

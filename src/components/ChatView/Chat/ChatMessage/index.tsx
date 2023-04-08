@@ -18,7 +18,7 @@ function ChatMessage({ className, image, username, hour, inbound, messages }: Pr
 		<div className={classNames}>
 			<ProfilePicture className={clsx("w-9 h-9", { "order-1": inbound })} src={image} />
 
-			<div className="grid max-w-[65%]">
+			<div className="grid max-w-[100%] _460px:max-w-[65%]">
 				<div className={clsx("flex items-center gap-3", { "ml-auto": inbound })}>
 					<p className={clsx("text-white", { "order-1": inbound })}>{username}</p>
 					<time className="text-light-slate-gray text-sm">{hour}</time>

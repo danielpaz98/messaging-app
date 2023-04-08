@@ -14,7 +14,7 @@ function Searcher({ className, placeholder, searchIcon: SearchIcon }: Props) {
 	const classNames = twMerge("bg-black text-echo-blue text-sm flex gap-4 py-3 px-5 rounded-lg", className);
 
 	return (
-		<form className={classNames}>
+		<form className={classNames} placeholder="JAJAJAJA">
 			<input
 				className="w-full placeholder:text-current bg-inherit outline-none"
 				placeholder={placeholder}
@@ -24,8 +24,8 @@ function Searcher({ className, placeholder, searchIcon: SearchIcon }: Props) {
 			{SearchIcon && isValidElement(SearchIcon()) ? (
 				SearchIcon()
 			) : (
-				<button type="button">
-					<MagnifyingGlassIcon className="pointer-events-none text-link-water" height={20} width={20} />
+				<button className="w-4 mobile:w-5" type="button">
+					<MagnifyingGlassIcon className="pointer-events-none text-link-water w-[inherit] h-[inherit]" />
 				</button>
 			)}
 		</form>

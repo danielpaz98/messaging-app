@@ -7,8 +7,10 @@ module.exports = {
 				DMsans: "'DM Sans', sans-serif",
 			},
 			screens: {
-				xs: "320px",
+				xs: "340px",
 				mobile: "500px",
+				_460px: "460px",
+				_860px: "860px",
 			},
 			colors: {
 				whisper: "#e9e9e9",

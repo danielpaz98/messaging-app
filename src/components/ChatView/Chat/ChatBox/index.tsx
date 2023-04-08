@@ -19,8 +19,8 @@ function ChatBox({ className }: Props) {
 
 	return (
 		<section className={classNames}>
-			<div className="flex gap-3">
-				<div className="flex items-end gap-5 py-4">
+			<div className="flex justify-center flex-wrap gap-2 mobile:gap-3 xs:justify-start">
+				<div className="flex items-end gap-2 mobile:gap-5 xs:py-4">
 					<button type="button">
 						<ImageIcon className="pointer-events-none" height={20} width={20} />
 					</button>
@@ -34,23 +34,25 @@ function ChatBox({ className }: Props) {
 					</button>
 				</div>
 
-				<TextareaAutosize
-					className="flex-grow resize-none outline-none rounded-3xl text-sm bg-black-russian-1 py-4 px-6"
-					placeholder="Add a comment..."
-					value={message}
-					onChange={(e) => setMessage(e.target.value.trimStart())}
-				/>
+				<div className="flex flex-grow w-full xs:w-auto gap-2 mobile:gap-5">
+					<TextareaAutosize
+						className="flex-grow resize-none outline-none rounded-3xl text-sm bg-black-russian-1 py-4 px-6 max-h-[130px]"
+						placeholder="Add a comment..."
+						value={message}
+						onChange={(e) => setMessage(e.target.value.trimStart())}
+					/>
 
-				<div className="flex items-end py-4">
-					{message ? (
-						<button type="button">
-							<PaperPlaneIcon className="pointer-events-none" height={20} width={20} />
-						</button>
-					) : (
-						<button className="px-1" type="button">
-							<MicrophoneFillIcon className="pointer-events-none" height={18} />
-						</button>
-					)}
+					<div className="flex items-end py-4">
+						{message ? (
+							<button type="button">
+								<PaperPlaneIcon className="pointer-events-none" height={20} width={20} />
+							</button>
+						) : (
+							<button className="px-1" type="button">
+								<MicrophoneFillIcon className="pointer-events-none" height={18} />
+							</button>
+						)}
+					</div>
 				</div>
 			</div>
 		</section>

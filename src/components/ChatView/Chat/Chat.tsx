@@ -1,6 +1,8 @@
-import { Fragment } from "react";
+import { useContext, Fragment } from "react";
 // PLUGINS
 import { twMerge } from "tailwind-merge";
+// CONTEXTS
+import { ChatViewContext } from "../ChatView";
 // COMPONENTS
 import ProfilePicture from "~/components/ProfilePicture";
 import ChatMessage from "./ChatMessage";
@@ -17,47 +19,62 @@ export type Props = {
 function Chat({ className }: Props) {
 	const classNames = twMerge("bg-black-pearl", className);
 
+	const { setShowChatInfo } = useContext(ChatViewContext);
+
 	return (
 		<section className={classNames}>
 			<div className="flex flex-col h-full">
 				<section className="flex flex-col flex-grow px-3 overflow-hidden">
-					<header className="flex justify-between px-3 py-7 gap-2 sticky top-0 bg-black-pearl">
-						<div className="flex items-center gap-4">
-							<ProfilePicture className="w-[60px] h-[60px]" src="https://api.dicebear.com/5.x/icons/svg?seed=Socks" />
+					<header className="px-2 py-4 mobile:px-3 mobile:py-7 gap-2 sticky top-0 bg-black-pearl">
+						<section className="grid xs:grid-cols-[auto_auto] justify-between items-center gap-y-1 gap-x-4">
+							<div
+								aria-hidden="true"
+								className="flex justify-center xs:justify-start flex-wrap items-center gap-y-1 gap-x-8 _460px:gap-x-4 cursor-pointer lg:pointer-events-none"
+								onClick={() => setShowChatInfo(true)}
+							>
+								<ProfilePicture
+									className="w-[60px] h-[60px] flex-shrink-0"
+									src="https://api.dicebear.com/5.x/icons/svg?seed=Socks"
+								/>
 
-							<div>
-								<h2 className="text-white text-3xl">Design Team</h2>
-								<small className="text-light-slate-gray text-sm">60 member, 10 online</small>
-							</div>
-						</div>
-
-						<div className="flex items-center gap-3">
-							<div className="flex [&>*:not(:first-child)]:-ml-1 [&>*]:border [&>*]:border-black-pearl">
-								<ProfilePicture
-									className="w-7 h-7"
-									src="https://api.dicebear.com/5.x/personas/svg?seed=Abby&backgroundColor=ebbf9a"
-								/>
-								<ProfilePicture
-									className="w-7 h-7"
-									src="https://api.dicebear.com/5.x/personas/svg?seed=Angel&backgroundColor=eda0a8"
-								/>
-								<ProfilePicture
-									className="w-7 h-7"
-									src="https://api.dicebear.com/5.x/personas/svg?seed=Miss%20kitty&backgroundColor=8acee2"
-								/>
-								<ProfilePicture
-									className="w-7 h-7"
-									src="https://api.dicebear.com/5.x/personas/svg?seed=Tiger&backgroundColor=f2f2f2"
-								/>
+								<div className="text-center xs:text-start w-full xs:w-auto">
+									<h2 className="text-white text-3xl mx-auto max-w-[200px] truncate" title="Design Team">
+										Design Team
+									</h2>
+									<small className="text-light-slate-gray text-sm">60 member, 10 online</small>
+								</div>
 							</div>
 
-							<button type="button">
-								<CirclePlusIcon className="pointer-events-none" height={32} width={32} />
-							</button>
-						</div>
+							<div className="xs:grid mx-auto gap-8 xs:mx-0 row-start-2 grid-cols-[60px_auto] _460px:gap-4 _460px:block _460px:row-start-auto">
+								<div className="flex items-center gap-3 col-start-2">
+									<div className="flex [&>*:not(:first-child)]:-ml-1 [&>*]:border [&>*]:border-black-pearl">
+										<ProfilePicture
+											className="w-7 h-7"
+											src="https://api.dicebear.com/5.x/personas/svg?seed=Abby&backgroundColor=ebbf9a"
+										/>
+										<ProfilePicture
+											className="w-7 h-7"
+											src="https://api.dicebear.com/5.x/personas/svg?seed=Angel&backgroundColor=eda0a8"
+										/>
+										<ProfilePicture
+											className="w-7 h-7"
+											src="https://api.dicebear.com/5.x/personas/svg?seed=Miss%20kitty&backgroundColor=8acee2"
+										/>
+										<ProfilePicture
+											className="w-7 h-7"
+											src="https://api.dicebear.com/5.x/personas/svg?seed=Tiger&backgroundColor=f2f2f2"
+										/>
+									</div>
+
+									<button type="button">
+										<CirclePlusIcon className="pointer-events-none" height={32} width={32} />
+									</button>
+								</div>
+							</div>
+						</section>
 					</header>
 
-					<div className="px-4 py-4 h-full overflow-y-auto hover-scrollbar">
+					<div className="p-3 h-full overflow-y-auto hover-scrollbar">
 						{groupChatsByDate?.map(([date, chats]) => (
 							<Fragment key={date}>
 								{date && (
@@ -84,7 +101,7 @@ function Chat({ className }: Props) {
 					</div>
 				</section>
 
-				<ChatBox />
+				<ChatBox className="py-3 px-2 mobile:px-6" />
 			</div>
 		</section>
 	);
