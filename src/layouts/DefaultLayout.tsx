@@ -11,7 +11,7 @@ export default function DefaultLayout({ children }: Props) {
 		<div className="main-container lg:flex">
 			<Sidebar className="hidden lg:block" />
 
-			<div>
+			<div className="main-container">
 				<TopBar className="p-4 md:py-4 md:px-10" />
 				<main className="h-[calc(100vh-var(--header-height))]">{children}</main>
 			</div>
