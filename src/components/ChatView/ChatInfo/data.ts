@@ -29,7 +29,7 @@ export const attachments = [
 	{
 		id: 4,
 		fileUrl: "/",
-		fileName: "Very important fil",
+		fileName: "Very important file",
 		fileSize: "7.5 MB",
 		fileFormat: FormatType.svg,
 		hour: "11:15 AM",
